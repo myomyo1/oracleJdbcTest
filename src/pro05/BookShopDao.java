@@ -16,8 +16,9 @@ public class BookShopDao {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-
+			
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 
 			String query = "insert into bookshop values (seq_bookshop_id.nextval, ? , ? , ? ,?,?)";
